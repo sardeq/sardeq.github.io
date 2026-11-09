@@ -1,0 +1,120 @@
+.crt {
+    --bezel: clamp(8px, 1.4vw, 20px);
+    --curve: clamp(18px, 3.5vw, 46px);
+
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.crt > * {
+    position: absolute;
+    inset: 0;
+}
+
+.crt-static {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+    opacity: 0.09;
+    mix-blend-mode: screen;
+    transition: opacity 0.35s ease;
+}
+
+.is-tuning .crt-static {
+    opacity: 1;
+    mix-blend-mode: normal;
+    transition-duration: 0.12s;
+}
+
+.crt-scanlines {
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 4, 30, 0.28) 0 1px,
+        transparent 1px 3px
+    );
+    animation: flicker 0.12s steps(2) infinite;
+}
+
+.crt-roll {
+    height: 30vh;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(200, 220, 255, 0.05) 50%,
+        transparent
+    );
+    animation: roll 8s linear infinite;
+}
+
+.crt-frame {
+    inset: var(--bezel);
+    border-radius: var(--curve);
+    background: radial-gradient(
+        ellipse at 22% 8%,
+        rgba(255, 255, 255, 0.07),
+        transparent 35%
+    );
+    box-shadow:
+        0 0 0 100vmax var(--bezel-color),
+        inset 0 0 0 1px rgba(160, 190, 255, 0.12),
+        inset 0 0 clamp(50px, 10vw, 160px) rgba(0, 3, 25, 0.9);
+}
+
+.screen {
+    transform-origin: 50% 50vh;
+    transition: opacity 0.2s ease;
+}
+
+.is-tuning .screen {
+    opacity: 0;
+    transition-duration: 0.12s;
+}
+
+.is-powering-on .screen {
+    animation: power-on 0.9s ease-out both;
+}
+
+@keyframes power-on {
+    0% {
+        transform: scale(0, 0.003);
+        filter: brightness(8);
+    }
+    20% {
+        transform: scale(1, 0.003);
+        filter: brightness(8);
+    }
+    55% {
+        transform: scale(1, 1);
+        filter: brightness(2);
+    }
+    100% {
+        transform: none;
+        filter: none;
+    }
+}
+
+@keyframes roll {
+    from {
+        transform: translateY(-30vh);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes flicker {
+    50% {
+        opacity: 0.85;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .crt-scanlines,
+    .crt-roll,
+    .is-powering-on .screen {
+        animation: none;
+    }
+}

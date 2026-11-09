@@ -5,60 +5,69 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hello, world - Sadeq</title>
         <link rel="icon" type="image/x-icon" href="../Images/icon.png" />
-        <link rel="stylesheet" href="../style.css" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Redaction+50:ital,wght@0,400;0,700;1,400&family=Share+Tech&family=Unkempt:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap"
             rel="stylesheet"
         />
+
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="../crt.css" />
+        <script src="../crt.js"></script>
     </head>
 
     <body>
-        <div class="topbar">
-            <button onclick="window.location.href = '../index.html'">Home</button>
-            <button onclick="window.location.href = '../articles.html'">Articles</button>
-            <button onclick="window.location.href = '../stuff.html'">My Stuff</button>
-        </div>
+        <div class="screen">
+            <header class="topbar">
+                <span class="osd">PLAY ▶</span>
+                <nav class="channels">
+                    <a href="../index.html">Home</a>
+                    <a href="../articles.html" aria-current="page">Articles</a>
+                    <a href="../stuff.html">My Stuff</a>
+                </nav>
+                <span class="osd" data-tape-counter>SP 0:00:00</span>
+            </header>
 
-        <div class="main page">
-            <article class="article">
-                <h1 class="title">Hello, world</h1>
-                <p class="date">November 5, 2026</p>
+            <main class="main page">
+                <article class="article">
+                    <h1 class="title">Hello, world</h1>
+                    <p class="date">November 5, 2026</p>
 
-                <p>
-                    This is the first article on the site. It's mostly here to
-                    test the layout, so expect it to be replaced.
-                </p>
+                    <p>
+                        This is the first article on the site. It's mostly here
+                        to test the layout, so expect it to be replaced.
+                    </p>
 
-                <h2>Why write here?</h2>
-                <p>
-                    I keep learning things while building projects, and most of
-                    it ends up forgotten in old terminals and commit messages.
-                    This page is where I'll write some of it down.
-                </p>
+                    <h2>Why write here?</h2>
+                    <p>
+                        I keep learning things while building projects, and
+                        most of it ends up forgotten in old terminals and commit
+                        messages. This page is where I'll write some of it down.
+                    </p>
 
-                <blockquote>
-                    If it took me more than an hour to figure out, it's worth a
-                    post.
-                </blockquote>
+                    <blockquote>
+                        If it took me more than an hour to figure out, it's
+                        worth a post.
+                    </blockquote>
 
-                <h2>A code block, for testing</h2>
-                <pre><code>$ nix develop
+                    <h2>A code block, for testing</h2>
+                    <pre><code>$ nix develop
 $ cargo run --release</code></pre>
 
-                <p>
-                    Inline code looks like <code>niri msg outputs</code>, and
-                    links look like <a href="../stuff.html">this</a>.
-                </p>
+                    <p>
+                        Inline code looks like <code>niri msg outputs</code>, and
+                        links look like <a href="../stuff.html">this</a>.
+                    </p>
 
-                <p><a href="../articles.html">&larr; Back to articles</a></p>
-            </article>
+                    <p><a href="../articles.html">&larr; Back to articles</a></p>
+                </article>
+            </main>
+
+            <footer>
+                <p>meaningful message here</p>
+            </footer>
         </div>
-
-        <footer>
-            <p>meaningful message here</p>
-        </footer>
     </body>
 </html>

@@ -4,98 +4,97 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sadeq Portfolio</title>
-        <link rel="icon" type="image/x-icon" href="/Images/icon.png" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" type="image/x-icon" href="Images/icon.png" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Redaction+50:ital,wght@0,400;0,700;1,400&family=Share+Tech&family=Unkempt:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap"
             rel="stylesheet"
         />
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="crt.css" />
+        <script src="crt.js"></script>
     </head>
 
     <body>
-        <div class="topbar">
-            <button onclick="window.location.href = 'index.html'">Home</button>
-            <button onclick="window.location.href = 'articles.html'">
-                Articles
-            </button>
-            <button onclick="window.location.href = 'stuff.html'">
-                My Stuff
-            </button>
-        </div>
+        <div class="screen">
+            <header class="topbar">
+                <span class="osd">PLAY ▶</span>
+                <nav class="channels">
+                    <a href="index.html" aria-current="page">Home</a>
+                    <a href="articles.html">Articles</a>
+                    <a href="stuff.html">My Stuff</a>
+                </nav>
+                <span class="osd" data-tape-counter>SP 0:00:00</span>
+            </header>
 
-        <div class="main">
-            <div class="main-content">
-                <h1 class="title">Hi, I am Sadeq</h1>
+            <main class="main">
+                <div class="main-content">
+                    <h1 class="title">Hi, I am Sadeq</h1>
 
-                <p class="subtitle">
-                    Trying my best to be a full-stack developer and system
-                    engineer
-                </p>
+                    <p class="subtitle">
+                        Trying my best to be a full-stack developer and system
+                        engineer
+                    </p>
 
-                <p>What I'm doing right now</p>
+                    <p>What I'm doing right now</p>
 
-                <ul>
-                    <li>Working as a Software Engineer at Delv</li>
-                    <li>Making my Graduation project with my classmates</li>
-                    <li>Learning Go</li>
-                    <li>
-                        (trying) to remake Zyro browser with an actual framework
-                        (probably chromium)
-                    </li>
-                </ul>
-            </div>
+                    <ul>
+                        <li>Working as a Software Engineer at Delv</li>
+                        <li>Making my Graduation project with my classmates</li>
+                        <li>Learning Go</li>
+                        <li>
+                            (trying) to remake Zyro browser with an actual
+                            framework (probably chromium)
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="main-btns">
-                <button onclick="window.open('stuff.html')">
-                    Check out my stuff
-                </button>
-                <button
-                    onclick="
-                        window.location.href = 'mailto:sadeqodeh@proton.me'
-                    "
+                <div class="main-btns">
+                    <a class="btn" href="stuff.html">Check out my stuff</a>
+                    <a class="btn btn-outline" href="mailto:sadeqodeh@proton.me">
+                        Get in touch
+                    </a>
+                </div>
+            </main>
+
+            <div class="socials">
+                <a
+                    href="https://github.com/sardeq"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-box"
                 >
-                    Get in touch
-                </button>
+                    <img src="Images/GitHub_Invertocat_White.png" alt="GitHub" />
+                    <p>Github</p>
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/sadeq-odeh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-box"
+                >
+                    <img src="Images/InBug-White.png" alt="LinkedIn" />
+                    <p>LinkedIn</p>
+                </a>
+
+                <a
+                    href="https://x.com/sadeqlo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-box"
+                >
+                    <img src="Images/icons8-x-logo-50.png" alt="X" />
+                    <p>Twitter?</p>
+                </a>
             </div>
+
+            <footer>
+                <p>meaningful message here</p>
+            </footer>
         </div>
-
-        <div class="socials">
-            <a
-                href="https://github.com/sardeq"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-box"
-            >
-                <img src="Images/GitHub_Invertocat_White.png" alt="GitHub" />
-                <p>Github</p>
-            </a>
-
-            <a
-                href="https://www.linkedin.com/in/sadeq-odeh/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-box"
-            >
-                <img src="Images/InBug-White.png" alt="LinkedIn" />
-                <p>LinkedIn</p>
-            </a>
-
-            <a
-                href="https://x.com/sadeqlo"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-box"
-            >
-                <img src="Images/icons8-x-logo-50.png" alt="X" />
-                <p>Twitter?</p>
-            </a>
-        </div>
-
-        <footer>
-            <p>meaningful message here</p>
-        </footer>
     </body>
 </html>

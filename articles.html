@@ -5,42 +5,53 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sadeq Portfolio - Articles</title>
         <link rel="icon" type="image/x-icon" href="Images/icon.png" />
-        <link rel="stylesheet" href="style.css" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Redaction+50:ital,wght@0,400;0,700;1,400&family=Share+Tech&family=Unkempt:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap"
             rel="stylesheet"
         />
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="crt.css" />
+        <script src="crt.js"></script>
     </head>
 
     <body>
-        <div class="topbar">
-            <button onclick="window.location.href = 'index.html'">Home</button>
-            <button onclick="window.location.href = 'articles.html'">Articles</button>
-            <button onclick="window.location.href = 'stuff.html'">My Stuff</button>
+        <div class="screen">
+            <header class="topbar">
+                <span class="osd">PLAY ▶</span>
+                <nav class="channels">
+                    <a href="index.html">Home</a>
+                    <a href="articles.html" aria-current="page">Articles</a>
+                    <a href="stuff.html">My Stuff</a>
+                </nav>
+                <span class="osd" data-tape-counter>SP 0:00:00</span>
+            </header>
+
+            <main class="main page">
+                <div class="page-content">
+                    <h1 class="title">Articles</h1>
+                    <p class="subtitle">
+                        Notes on things I'm learning and building
+                    </p>
+
+                    <!-- Newest on top. To add one: copy articles/hello-world.html,
+                         edit it, then add a new <li> here. -->
+                    <ul class="article-list">
+                        <li>
+                            <a href="articles/hello-world.html">Hello, world</a>
+                            <p class="date">November 5, 2026</p>
+                            <p>A test post to make sure this page works.</p>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+
+            <footer>
+                <p>meaningful message here</p>
+            </footer>
         </div>
-
-        <div class="main page">
-            <div class="page-content">
-                <h1 class="title">Articles</h1>
-                <p class="subtitle">Notes on things I'm learning and building</p>
-
-                <!-- Newest on top. To add one: copy articles/hello-world.html,
-                     edit it, then add a new <li> here. -->
-                <ul class="article-list">
-                    <li>
-                        <a href="articles/hello-world.html">Hello, world</a>
-                        <p class="date">November 5, 2026</p>
-                        <p>A test post to make sure this page works.</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <footer>
-            <p>meaningful message here</p>
-        </footer>
     </body>
 </html>
